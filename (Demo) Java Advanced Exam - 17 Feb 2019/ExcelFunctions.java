@@ -1,3 +1,6 @@
+//!!!
+// 70/100..no idea why !?
+//!!!
 package JavaAdvancedExams;
 
 import java.io.BufferedReader;
