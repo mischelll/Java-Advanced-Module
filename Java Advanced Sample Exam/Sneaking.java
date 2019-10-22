@@ -39,8 +39,10 @@ public class Sneaking {
                 }
             }
         }
+        
         boolean samDead = false;
         boolean nikoladzeDead = false;
+        
         String[] directions = reader.readLine().split("");
         for (int i = 0; i < directions.length; i++) {
             String direction = directions[i];
@@ -57,8 +59,7 @@ public class Sneaking {
                 break;
             }
         }
-
-
+            
         printMatrix(matrix);
 
     }
@@ -88,6 +89,7 @@ public class Sneaking {
             samRow = samRow - 1;
             data[0] = samRow;
             data[1] = samCol;
+            
         } else if (direction.equals("D")) {
             if (matrix.get(samRow + 1).get(samCol).equals("d") || matrix.get(samRow + 1).get(samCol).equals("b")) {
                 matrix.get(samRow).set(samCol, ".");
@@ -108,6 +110,7 @@ public class Sneaking {
             samRow = samRow + 1;
             data[0] = samRow;
             data[1] = samCol;
+            
         } else if (direction.equals("L")) {
             if (matrix.get(samRow).get(samCol - 1).equals("d") || matrix.get(samRow).get(samCol - 1).equals("b")) {
                 matrix.get(samRow).set(samCol, ".");
@@ -128,6 +131,7 @@ public class Sneaking {
             samCol = samCol - 1;
             data[0] = samRow;
             data[1] = samCol;
+            
         } else if (direction.equals("R")) {
             if (matrix.get(samRow).get(samCol + 1).equals("d") || matrix.get(samRow).get(samCol + 1).equals("b")) {
                 matrix.get(samRow).set(samCol, ".");
@@ -148,6 +152,7 @@ public class Sneaking {
             samCol = samCol + 1;
             data[0] = samRow;
             data[1] = samCol;
+            
         } else if (direction.equals("W")) {
             data[0] = samRow;
             data[1] = samCol;
